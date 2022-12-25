@@ -17,10 +17,18 @@ fs.appendFile('./Logs/info.log', `\n${new date("America/New_York", 12).date} - $
         
     }
     Gwarn(text) {
+        var fs = require('fs')
+fs.appendFile('./Logs/warn.log', `\n${new date("America/New_York", 12).date} - ${text}`, function (err) {
+    
+ });
         this.warn(text)
     
     }
     Gerror(text) {
+        var fs = require('fs')
+fs.appendFile('./Logs/error.log', `\n${new date("America/New_York", 12).date} - ${text}`, function (err) {
+    
+ });
         this.error(text)
     }
 
