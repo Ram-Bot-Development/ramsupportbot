@@ -6,11 +6,12 @@ const write = require('write');
 class ConsoleLog extends Logs {
     constructor(name) {
         super(name);
+        this.name = name
         
     }
     async Ginfo(text) {
         var fs = require('fs')
-fs.appendFile('./Logs/info.log', `\n${new date("America/New_York", 12).date} - ${text}`, function (err) {
+fs.appendFile('./Logs/info.log', `\n[${this.name}] ${new date("America/New_York", 12).date} - ${text}`, function (err) {
     
  });
         this.info(text);
@@ -18,7 +19,7 @@ fs.appendFile('./Logs/info.log', `\n${new date("America/New_York", 12).date} - $
     }
     Gwarn(text) {
         var fs = require('fs')
-fs.appendFile('./Logs/warn.log', `\n${new date("America/New_York", 12).date} - ${text}`, function (err) {
+fs.appendFile('./Logs/warn.log', `\n[${this.name}] ${new date("America/New_York", 12).date} - ${text}`, function (err) {
     
  });
         this.warn(text)
@@ -26,7 +27,7 @@ fs.appendFile('./Logs/warn.log', `\n${new date("America/New_York", 12).date} - $
     }
     Gerror(text) {
         var fs = require('fs')
-fs.appendFile('./Logs/error.log', `\n${new date("America/New_York", 12).date} - ${text}`, function (err) {
+fs.appendFile('./Logs/error.log', `\n[${this.name}] ${new date("America/New_York", 12).date} - ${text}`, function (err) {
     
  });
         this.error(text)

@@ -19,9 +19,9 @@
   "homepage": "https://github.com/Ram-Bot-Anime-Dev/ramsupportbot#readme",
   "dependencies": {
     "better-date.js": "^1.0.2",
-    "discord-helper.js": "^3.0.1",
+    "discord-helper.js": "^4.0.1",
     "discord.js": "^14.7.1",
-    "ram-api.js": "^12.1.1",
+    "ram-api.js": "^12.1.10",
     "write": "^2.0.0"
   }
 }
